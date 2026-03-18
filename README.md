@@ -24,17 +24,18 @@ This platform grades programming assignments automatically. It spins up GitLab i
 
 The platform calls three microservices during the pipeline run to grade student submissions:
 
-- [**Error Evaluator and Best Practices Reviewer**](https://github.com/sarthak3d/LLM-code-Service)
+- [**Error Evaluator and Best Practices Reviewer**](https://github.com/Ishan-Pandita/LLM-code-Service)
   Runs automated code reviews using language models. It reads the code and leaves notes on readability and structure, similar to a code review from a peer.
-- [**Performance Analyzer**](https://github.com/sarthak3d/Performance-analyzer)
+- [**Performance Analyzer**](https://github.com/Ishan-Pandita/Performance-analyzer)
   Profiles execution time and memory usage so instructors can enforce specific Big-O complexity requirements.
-- [**AI Code Detector**](https://github.com/sarthak3d/AI-code-detector)
+- [**AI Code Detector**](https://github.com/Ishan-Pandita/AI-code-detector)
   Checks if submissions were likely written by AI chat tools, helping to catch academic integrity issues.
 
 ## Architecture
 
 The system runs on a containerized stack:
-- **Backend Application**: Java / Spring Boot. 
+
+- **Backend Application**: Java / Spring Boot.
 - **Platform Infrastructure**: Kubernetes (configured with Helm). It scales GitLab instances and CI runners automatically.
 - **Database**: PostgreSQL.
 
